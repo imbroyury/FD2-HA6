@@ -35,14 +35,6 @@ body {
 }
 .grid-table tbody tr {
   transition: .2s all;
-  /*.delete-btn-wrap {
-        padding: 0;
-        border: none;
-        height: 40px;
-        .btn-delete-row {
-          height: 100%;
-        }
-      }*/
 }
 .grid-table tbody tr:nth-child(even) {
   background-color: lightgrey;
