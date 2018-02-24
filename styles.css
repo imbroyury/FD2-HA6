@@ -1,0 +1,92 @@
+body {
+  font-family: Calibri, Candara, Segoe, sans-serif;
+  font-size: 20px;
+}
+.grid-table {
+  border-collapse: collapse;
+}
+.grid-table th,
+.grid-table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+.grid-table thead {
+  background-color: black;
+  color: white;
+}
+.grid-table thead th {
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+.grid-table thead th.sorted-by {
+  background-color: red;
+  color: white;
+}
+.grid-table thead th.sorted-by.ascending::after {
+  content: 'asc';
+}
+.grid-table thead th.sorted-by.descending::after {
+  content: 'desc';
+}
+.grid-table thead th:hover {
+  background-color: yellow;
+  color: black;
+}
+.grid-table tbody tr {
+  transition: .2s all;
+  /*.delete-btn-wrap {
+        padding: 0;
+        border: none;
+        height: 40px;
+        .btn-delete-row {
+          height: 100%;
+        }
+      }*/
+}
+.grid-table tbody tr:nth-child(even) {
+  background-color: lightgrey;
+}
+.grid-table tbody tr:hover {
+  background-color: lightgreen;
+}
+.grid-table tbody tr:hover .btn-delete-row {
+  visibility: visible;
+  opacity: 1;
+}
+.grid-table tbody tr td {
+  position: relative;
+}
+.grid-table tbody tr td:first-child {
+  font-weight: bold;
+}
+.grid-table tbody tr .btn-delete-row {
+  background-color: white;
+  color: black;
+  border: none;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s;
+  cursor: pointer;
+}
+.grid-table tbody tr .btn-delete-row:hover {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.form-add-new-row {
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
